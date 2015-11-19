@@ -10,7 +10,7 @@ data <- subset(data, data$Date >= "2007-02-01" & data$Date <= "2007-02-02")
 par(mfcol = c(2,2))
 with(data, plot(Time, Global_active_power, pch = '', xlab = '', ylab = "Global Active Power"))
 lines(data$Time, data$Global_active_power)
-
+plot(data$Time, data$Sub_metering_1, pch = '', ylab = "Energy sub metering", xlab = '')
 lines(data$Time, data$Sub_metering_1)
 lines(data$Time, data$Sub_metering_2, col = "red")
 lines(data$Time, data$Sub_metering_3, col = "blue")
@@ -19,3 +19,6 @@ plot(data$Time, data$Voltage, pch = '', xlab = "datetime", ylab = "Voltage")
 lines(data$Time, data$Voltage)
 plot(data$Time, data$Global_reactive_power, pch = '', xlab = "datetime", ylab = "Global_reactive_power")
 lines(data$Time, data$Global_reactive_power)
+
+#Save plots to a png file
+
