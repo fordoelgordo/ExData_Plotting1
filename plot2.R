@@ -11,3 +11,5 @@ with(data, plot(Time, Global_active_power, pch = '', xlab = '', ylab = "Global A
 lines(data$Time, data$Global_active_power)
 
 #Copy plot to a png file
+dev.copy(png, file = "plot2.png", width = 480, height = 480)
+dev.off()
